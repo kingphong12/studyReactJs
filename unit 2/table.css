@@ -1,0 +1,26 @@
+. {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 62,5%;
+}
+.header {
+    text-align: center;
+    background-color: aqua;
+}
+.table {
+    margin: auto;
+    width: 500px;
+    border: 1px solid #777;
+    border-collapse: collapse;
+}
+.table__profy {
+    padding: 8px 6px;
+    font-weight: 500; 
+}
+.table__layble {
+    
+}
+.table__item {
+   padding-left: 6px;
+}
+
+   

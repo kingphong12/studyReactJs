@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="table.css">
+</head>
+<body>
+    <form method="GET" action="" enctype="">
+        <div class="header">
+            <h1 class="header__h1">Đăng ký thành viên</h1>
+        </div>
+        <table border="1" class="table">
+            <th class="table__layble">Nội dung</th>
+            <th>Giá trị</th>
+            <tr>
+                <td class="table__profy">Họ tên</td>
+                <td class="table__item">
+                    <input type="text" name="" id="">
+                </td>
+            </tr>
+            <tr>
+                <td class="table__profy">Email:</td>
+                <td class="table__item">
+                    <input type="email" name="email" id="" required placeholder="Nhập Email của bạn">
+                </td>
+            </tr>
+            <tr>
+                <td class="table__profy">Mật khẩu:</td>
+                <td class="table__item">
+                    <input type="password" name="mypassword" id="">
+                </td>
+            </tr>
+            <tr>
+                <td class="table__profy">Avatar</td>
+                <td class="table__item">
+                    <input type="file" name="file" id="file" multiple accept="image/png">
+                    <span>No file chosen</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="table__profy">Số điện thoại:</td>
+                <td class="table__item">
+                    <input type="number" name="telephone" id="">
+                </td>
+            </tr>
+            <tr>
+                <td class="table__profy">Tuổi</td>
+                <td class="table__item">
+                    <select name="" id="" multiple >
+                        <option value="">1 tuổi</option>
+                        <option value="">2 tuổi</option>
+                        <option value="" selected>3 tuổi</option>
+                        <option value="" selected>4 tuổi</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="table__profy">Giới tính</td>
+                <td class="table__item">
+                    <div>
+                        <input type="radio" name="gender" id="" checked>
+                        <label for="gender">Nam</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="gender" id="">
+                        <label for="gender" > Nữ</label>
+                    </div>
+                </td>
+                
+            </tr>
+            <tr>
+                <td class="table__profy">Sở thích:</td>
+                <td class="table__item">
+                    <div>
+                        <input type="checkbox">
+                        <label for="da bong">Đá bóng</label>
+                    </div>
+                    <div>
+                        <input type="checkbox">
+                        <label for="da bong">Cầu lông</label>
+                    </div>
+                    <div>
+                        <input type="checkbox">
+                        <label for="da bong">Đua thuyền</label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="table__profy">Ghi chú</td>
+                <td class="table__item">
+                    <div>
+                        <textarea name="message" id="" cols="20" rows="5" placeholder="Buổi học đầu tiền về HTML"></textarea>
+                    </div>
+                </td>
+            </tr>                    
+        </table>
+
+        <input type="submit" value="Submit data">
+    </form>
+</body>
+</html>
