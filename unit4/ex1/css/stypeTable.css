@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 62.5%;
+}
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form {
+    width: 800px;
+    height: 300px;
+    overflow: scroll;
+}
+.table {
+    border-collapse: collapse;
+    border: 1px solid #ccccff;
+}
+.bg-color {
+    background-image: linear-gradient(90deg , #993399 , #666699);
+}
+.form__header {
+}
+.form__header-text {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #ffffff;
+    width: 150px;
+}
