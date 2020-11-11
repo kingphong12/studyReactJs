@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+.grid {
+    width: 2048px;
+    max-width: 100%;
+    margin: 0 auto;    
+    background-color: #fff;
+}
+.grid__row {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 1em;
+    margin-top: 10px;
+}
+.base {
+    background-color: #ff6666;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+.grid__row {
+    display: grid;
+    grid-template-columns: repeat(6, 2fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 1em;
+    margin-top: 10px;
+}
+.grid__row3 {
+    display: grid;
+    grid-template-columns: repeat(4, 3fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 1em;
+    margin-top: 10px;
+}
+.grid__row4 {
+    display: grid;
+    grid-template-columns: repeat(3, 4fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 1em;
+    margin-top: 10px;
+}
+.grid__row5 {
+    display: grid;
+    grid-template-columns: 6fr 6fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 1em;
+    margin-top: 10px;
+}
+.grid__row6 {
+    display: grid;
+    grid-template-columns: 5fr 7fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 1em;
+    margin-top: 10px;
+}
+.grid__row7 {
+    display: grid;
+    grid-template-columns: 4fr 8fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 1em;
+    margin-top: 10px;
+}
+.grid__row8 {
+    display: grid;
+    grid-template-columns: 3fr 9fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 1em;
+    margin-top: 10px;
+}
+.grid__row9 {
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 1em;
+    margin-top: 10px;
+}
+.grid__row10 {
+    display: grid;
+    grid-template-columns: 1fr 10fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 1em;
+    margin-top: 10px;
+}
+.grid__row11 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 1em;
+    margin-top: 10px;
+}
+.grid__row-text {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #fff;
+}
