@@ -1,0 +1,10 @@
+:root {
+    --label-text-color: #333300;
+    --height-input: 50px;
+    --text--form-size: 2.4rem;
+}
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
