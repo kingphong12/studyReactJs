@@ -1,0 +1,121 @@
+.container {
+    margin: 0 auto;
+    width: 1200px;
+}
+.wrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e2f5fb;
+    min-height: 800px;
+}
+.wrap__card {
+    width: 50%;
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 14px 12px #7777;
+}
+.wrap__card__inner {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wrap__card__inner::before {
+    content: "";
+    position: absolute;
+    border-width: 40px 40px;
+    border-style:  solid;
+    border-color: #b1dbe7 transparent transparent transparent;
+    top: 99%;
+}
+.wrap__card__inner::after {
+    position: absolute;
+    content: "+";
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    top: 83%;
+    left: 10%;
+    font-size: 1.4rem;
+    background-color: var(--white-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 6rem;
+    box-shadow: 0 4px 12px #cccccc;
+}
+.wrap__card__img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #b1dbe7;
+}
+.wrap__card__img:hover .wrap__card__img-animation{
+    display: block;
+    cursor: pointer;
+}
+.wrap__card__img-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.wrap__card-plus {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: var(--white-color);
+    border-radius: 50%;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 84%;
+    right: 10%;
+    box-shadow: 0 4px 12px var(--box-s-element-color);
+    z-index: 2;
+}
+.wrap__card-plus:hover {
+    box-shadow: 0 4px 12px var(--box-s-color);
+    cursor: pointer;
+}
+.wrap__card-plus-icon {
+   font-size: 3rem;
+   font-weight: 300;
+   color: #333333;
+}
+.wrap__card__img-animation {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    top: 0;
+    display: none;
+}
+.wrap__card-img-hover {
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wrap__card__img-hover-text {
+    font-size: 6rem;
+    color: var(--white-color);
+}
+.wrap__card-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 34px;
+}
+.wrap__card-header-text {
+    display: inline-block;
+    font-size: 4.8rem;
+    font-weight: 400;
+    color: var(--box-s-color);
+    padding: 50px 0 30px;
+}
