@@ -11,6 +11,7 @@
 }
 .row {
     display: flex;
+    flex-wrap: wrap;
     align-items: stretch;
     justify-content: flex-start;
     background-color: #cccccc;
@@ -37,6 +38,7 @@
 .row__list-profy {
     margin: 20px;
     position: relative;
+    background-color: brown;
 }
 .row__list-profy-header {
     display: block;

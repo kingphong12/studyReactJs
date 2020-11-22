@@ -37,12 +37,13 @@
                                     <p for="name">Name</p>
                                     <input class="form__content-form-item-text" type="text" placeholder="Pets name">
                                 </div>
-                               <div class="form__content-form-camera">
+                                <input name="avatar" id="avatar" type="file" class="avatar">
+                               <label class="form__content-form-camera" for="avatar">
                                     <div class="form__content-form-camera-icon">
                                         <i class="fas fa-camera-retro"></i>
                                     </div>
                                     <span>Upload a photo</span>
-                                </div>
+                               </label>
                             </div>
                             <div class="form__content-form-list">
                                 <div class="form__content-form-item">
@@ -58,23 +59,29 @@
                                 <div class="form__content-form-item">
                                     <p for="name">Gender</p>
                                     <div class="form__content-form-item-inner">
-                                        <div class="form__content-form-item-inner-board">
-                                            <input type="submit" value="Famale" class="btn">
-                                        </div>
-                                        <div class="form__content-form-item-inner-board">
-                                            <input type="submit" value="Male" class="btn">
-                                        </div>
+                                        <input type="radio" name="check" id="check" class="check">
+                                        <label class="form__content-form-item-inner-board" for="check">
+                                            <!-- <input type="submit" value="Famale" class="btn"> -->
+                                            Famale
+                                        </label>
+                                        <label class="form__content-form-item-inner-board" for="check">
+                                            <!-- <input type="submit" value="Male" class="btn"> -->
+                                            Male
+                                        </label>
                                     </div>
                                 </div>
                                 <div class="form__content-form-item">
                                     <p for="name">Spayed or Neutered</p>
                                     <div class="form__content-form-item-inner">
-                                        <div class="form__content-form-item-inner-board">
-                                            <input type="submit" value="Spayed" class="btn-tool">
-                                        </div>
-                                        <div class="form__content-form-item-inner-board">
-                                            <input type="submit" value="Neutered" class="btn-tool">
-                                        </div>
+                                        <input type="radio" name="checked" id="checked" class="checked">
+                                        <label class="form__content-form-item-inner-board" for="checked">
+                                            <!-- <input type="submit" value="Spayed" class="btn-tool"> -->
+                                            àcgsgdg
+                                        </label>
+                                        <label class="form__content-form-item-inner-board" for="checked">
+                                            <!-- <input type="submit" value="Neutered" class="btn-tool"> -->
+                                            fsfds
+                                        </label>
                                     </div>
                                 </div>
                             </div>

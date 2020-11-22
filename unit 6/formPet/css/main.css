@@ -76,8 +76,8 @@
     font-weight: 500;
     line-height: 64px;
 }
-.form__content-form {
-
+.avatar {
+    display: none;
 }
 .form__content-form-list {
     display: flex;
@@ -111,6 +111,7 @@
     display: flex;
     align-items: flex-end;
     margin-right: 40px;
+    cursor: pointer;
 }
 .form__content-form-camera-icon {
     width: 60px;
@@ -142,6 +143,12 @@
     align-items: center;
     overflow: hidden;
     text-indent: 0;
+}
+.check {
+    display: none;
+}
+input[type^="radio"]:checked + label {
+    background-color: chocolate;
 }
 /* .form__content-form-item-inner-board:hover {
     background-color: #ff9999;
