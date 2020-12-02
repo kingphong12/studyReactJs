@@ -1,0 +1,292 @@
+$text-color: #a5a5a5;
+$text-color-orange: #d8823b;
+$height-menu-item: 4.2rem;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+html,
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+.d-flex {
+    display: flex;
+}
+.algin-center {
+    align-items: center;
+}
+.p-relative {
+    position: relative;
+}
+.p-absolute {
+    position: absolute;
+}
+.fontSize-12 {
+    font-size: 1.2rem;
+}
+.fontSize-10 {
+    font-size: 1rem;
+}
+.mr-icon {
+    margin-right: 0.8rem;
+}
+.h-icon {
+    width: 1.6rem;
+    text-align: center;
+}
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #eeeeee;
+}
+.wrapper {
+    position: absolute;
+    width: 12rem;
+    background-color: #ffffff;
+    top: 10px;
+    left: 10px;
+}
+.posedo-right {
+    width: 0.3rem;
+    height: 100%;
+    top: 0;
+    right: -0.3rem;
+    background-color: $text-color-orange;
+    display: none;
+    &::after {
+        position: absolute;
+        content: "";
+        left: -4%;
+        top: 50%;
+        border-width: 4px 4px;
+        border-style: solid;
+        border-color: transparent $text-color-orange transparent transparent;
+        transform: translate(-100%, -50%);
+    }
+}
+.menu__list {
+    width: 100%;
+    .list-item {
+        list-style: none;
+        background-color: #eeeeee;
+        border-bottom: 1px solid #eeeeee;
+        display: flex;
+        justify-content: center;
+        height: $height-menu-item;
+        &:hover {
+            .chil-menu {
+                display: block;
+            }
+        }
+        &.active {
+            position: relative;
+            background-color: $text-color-orange;
+            .list-item-link {
+                color: $text-color-orange;
+            }
+            &::after {
+                position: absolute;
+                content: "";
+                left: -4%;
+                top: 50%;
+                border-width: 4px 4px;
+                border-style: solid;
+                border-color: transparent transparent transparent $text-color-orange;
+                transform: translate(100%, -50%);
+            }
+            &::before {
+                position: absolute;
+                content: "";
+                right: -4%;
+                top: 50%;
+                border-width: 4px 4px;
+                border-style: solid;
+                border-color: transparent $text-color-orange transparent transparent;
+                transform: translate(-100%, -50%);
+                z-index: 1;
+            }
+        }
+        .list-item-link {
+            text-decoration: none;
+            padding: 1rem 1.5rem;
+            color: $text-color;
+            width: 94%;
+            background-color: #ffffff;
+            &:hover {
+                color: $text-color-orange;
+                box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+            }
+            .root-menu {
+                p {
+                    font-weight: 500;
+                }
+            }
+            
+            .chil-menu {
+                width: 100%;
+                top: 0;
+                right: -103%;
+                display: none;
+                &::after {
+                    position: absolute;
+                    content: "";
+                    width: 0.3rem;
+                    top: 0;
+                    bottom: 0;
+                    left:-3%;
+                    background-color: $text-color-orange;
+                }
+                &::before {
+                    position: absolute;
+                    content: "";
+                    left: -3%;
+                    top: calc(#{$height-menu-item}/2);
+                    border-width: 4px 4px;
+                    border-style: solid;
+                    border-color: transparent $text-color-orange transparent transparent;
+                    transform: translate(-100%, -50%);
+                }
+                .chil-menu-item {
+                    background-color: #ffffff;
+                    border-bottom: 1px solid #eeeeee;
+                    height: calc(#{$height-menu-item}/2);
+                    .chil-menu-item-link {
+                        padding: 0.5rem 1rem;
+                        color: $text-color;
+                        &:hover {
+                            box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+                            color: $text-color-orange;
+                            .grandchild-menu {
+                                display: block;
+                            }
+                        }
+                        h2 {
+                            height: 10px;
+                            line-height: 10px;
+                        }
+                        .grandchild-menu {
+                            width: 100%;
+                            top: 0;
+                            right: -103%;
+                            display: none;
+                            &::after {
+                                position: absolute;
+                                content: "";
+                                width: 0.3rem;
+                                top: 0;
+                                bottom: 0;
+                                left:-3%;
+                                background-color: $text-color-orange;
+                            }
+                            &::before {
+                                position: absolute;
+                                content: "";
+                                left: -3%;
+                                top: calc(#{$height-menu-item}/4);
+                                border-width: 4px 4px;
+                                border-style: solid;
+                                border-color: transparent $text-color-orange transparent transparent;
+                                transform: translate(-100%, -50%);
+                            }
+                            .grandchild-menu-item {
+                                background-color: #ffffff;
+                                border-bottom: 1px solid #eeeeee;
+                                .grandchild-menu-item-link {
+                                    padding: 0.5rem 1rem;
+                                    color: $text-color;
+                                    &:hover {
+                                        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+                                        color: $text-color-orange;
+                                        .posedo-great-grandchild-item,
+                                        .great-grandchild-menu {
+                                            display: block;
+                                        }
+                                    }
+                                    .great-grandchild-menu {
+                                        width: 100%;
+                                        top: 0;
+                                        right: -103%;
+                                        display: none;
+                                        &::after {
+                                            position: absolute;
+                                            content: "";
+                                            width: 0.3rem;
+                                            top: 0;
+                                            bottom: 0;
+                                            left:-3%;
+                                            background-color: $text-color-orange;
+                                        }
+                                        &::before {
+                                            position: absolute;
+                                            content: "";
+                                            left: -3%;
+                                            top: calc(#{$height-menu-item}/4);
+                                            border-width: 4px 4px;
+                                            border-style: solid;
+                                            border-color: transparent $text-color-orange transparent transparent;
+                                            transform: translate(-100%, -50%);
+                                        }
+                                        .great-grandchild-menu-item {
+                                            background-color: #ffffff;
+                                            border-bottom: 1px solid #eeeeee;
+                                            .great-grandchild-menu-item-link {
+                                                padding: 0.5rem 1rem;
+                                                color: $text-color;
+                                                &:hover {
+                                                    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+                                                    color: $text-color-orange;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &:hover {
+                .posedo-right,
+                .posedo-left,
+                .chil-menu {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+form {
+    background-color: #eeeeee;
+    display: flex;
+    justify-content: center;
+    .search {
+        padding: 0.5rem;
+        width: 94%;
+        background-color: #ffffff;
+        input {
+            width: 81%;
+            height: 2rem;
+            font-size: 0.8rem;
+            text-indent: 3px;
+        }
+        .search-icon {
+            justify-content: center;
+            padding: .7rem;
+            background-color: $text-color-orange;
+            border-top-right-radius: 3px;
+            border-bottom-right-radius: 3px;
+            .fa-search-icon {
+                color: #ffffff;
+            }
+            &:hover {
+                background-color: #cf8a55;
+                cursor: pointer;
+                box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+            }
+        }
+    }
+}
