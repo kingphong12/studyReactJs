@@ -1,5 +1,5 @@
-$text-color: #a5a5a5;
-$text-color-orange: #d8823b;
+$gray-color: #a5a5a5;
+$orange-color: #d8823b;
 $height-menu-item: 4.2rem;
 * {
     margin: 0;
@@ -50,30 +50,42 @@ body {
     top: 10px;
     left: 10px;
 }
-.posedo-right {
-    width: 0.3rem;
-    height: 100%;
+Child-menu {
+    width: 100%;
     top: 0;
-    right: -0.3rem;
-    background-color: $text-color-orange;
+    right: -103%;
     display: none;
-    &::after {
-        position: absolute;
-        content: "";
-        left: -4%;
-        top: 50%;
-        border-width: 4px 4px;
-        border-style: solid;
-        border-color: transparent $text-color-orange transparent transparent;
-        transform: translate(-100%, -50%);
-    }
+}
+g-Child-menu-after {
+    position: absolute;
+    content: "";
+    width: 0.3rem;
+    top: 0;
+    bottom: 0;
+    left:-3%;
+    background-color: $orange-color;
+}
+g-Child-menu-before {
+    position: absolute;
+    content: "";
+    border-width: 4px 4px;
+    border-style: solid;
+    transform: translate(-100%, -50%);
+}
+box-s-color {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+    color: $orange-color;
+}
+b-b-color {
+    background-color: #ffffff;
+    border-bottom: 1px solid #eeeeee;
 }
 .menu__list {
     width: 100%;
     .list-item {
-        list-style: none;
         background-color: #eeeeee;
         border-bottom: 1px solid #eeeeee;
+        list-style: none;
         display: flex;
         justify-content: center;
         height: $height-menu-item;
@@ -84,82 +96,59 @@ body {
         }
         &.active {
             position: relative;
-            background-color: $text-color-orange;
+            background-color: $orange-color;
             .list-item-link {
-                color: $text-color-orange;
+                color: $orange-color;
             }
             &::after {
-                position: absolute;
-                content: "";
+                @extend g-Child-menu-before;
                 left: -4%;
                 top: 50%;
-                border-width: 4px 4px;
-                border-style: solid;
-                border-color: transparent transparent transparent $text-color-orange;
+                border-color: transparent transparent transparent $orange-color;
                 transform: translate(100%, -50%);
             }
             &::before {
-                position: absolute;
-                content: "";
+                @extend g-Child-menu-before;
                 right: -4%;
                 top: 50%;
-                border-width: 4px 4px;
-                border-style: solid;
-                border-color: transparent $text-color-orange transparent transparent;
-                transform: translate(-100%, -50%);
+                border-color: transparent $orange-color transparent transparent;
                 z-index: 1;
             }
         }
         .list-item-link {
             text-decoration: none;
             padding: 1rem 1.5rem;
-            color: $text-color;
+            color: $gray-color;
             width: 94%;
             background-color: #ffffff;
             &:hover {
-                color: $text-color-orange;
-                box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+                @extend box-s-color;
             }
             .root-menu {
                 p {
                     font-weight: 500;
                 }
             }
-            
             .chil-menu {
-                width: 100%;
-                top: 0;
-                right: -103%;
-                display: none;
+                @extend Child-menu;
                 &::after {
-                    position: absolute;
-                    content: "";
-                    width: 0.3rem;
-                    top: 0;
-                    bottom: 0;
-                    left:-3%;
-                    background-color: $text-color-orange;
+                    @extend g-Child-menu-after;
                 }
                 &::before {
-                    position: absolute;
-                    content: "";
+                    @extend g-Child-menu-before;
                     left: -3%;
                     top: calc(#{$height-menu-item}/2);
-                    border-width: 4px 4px;
-                    border-style: solid;
-                    border-color: transparent $text-color-orange transparent transparent;
-                    transform: translate(-100%, -50%);
+                    border-color: transparent $orange-color transparent transparent;
                 }
                 .chil-menu-item {
-                    background-color: #ffffff;
                     border-bottom: 1px solid #eeeeee;
                     height: calc(#{$height-menu-item}/2);
                     .chil-menu-item-link {
                         padding: 0.5rem 1rem;
-                        color: $text-color;
+                        color: $gray-color;
+                        background-color: #ffffff;
                         &:hover {
-                            box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
-                            color: $text-color-orange;
+                            @extend box-s-color;
                             .grandchild-menu {
                                 display: block;
                             }
@@ -169,76 +158,48 @@ body {
                             line-height: 10px;
                         }
                         .grandchild-menu {
-                            width: 100%;
-                            top: 0;
-                            right: -103%;
-                            display: none;
+                            @extend Child-menu;
                             &::after {
-                                position: absolute;
-                                content: "";
-                                width: 0.3rem;
-                                top: 0;
-                                bottom: 0;
-                                left:-3%;
-                                background-color: $text-color-orange;
+                                @extend g-Child-menu-after;
                             }
                             &::before {
-                                position: absolute;
-                                content: "";
+                                @extend g-Child-menu-before;
                                 left: -3%;
                                 top: calc(#{$height-menu-item}/4);
-                                border-width: 4px 4px;
-                                border-style: solid;
-                                border-color: transparent $text-color-orange transparent transparent;
-                                transform: translate(-100%, -50%);
+                                border-color: transparent $orange-color transparent transparent;
                             }
                             .grandchild-menu-item {
-                                background-color: #ffffff;
                                 border-bottom: 1px solid #eeeeee;
                                 .grandchild-menu-item-link {
                                     padding: 0.5rem 1rem;
-                                    color: $text-color;
+                                    color: $gray-color;
+                                    background-color: #ffffff;
                                     &:hover {
-                                        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
-                                        color: $text-color-orange;
+                                        @extend box-s-color;
                                         .posedo-great-grandchild-item,
                                         .great-grandchild-menu {
                                             display: block;
                                         }
                                     }
                                     .great-grandchild-menu {
-                                        width: 100%;
-                                        top: 0;
-                                        right: -103%;
-                                        display: none;
+                                        @extend Child-menu;
                                         &::after {
-                                            position: absolute;
-                                            content: "";
-                                            width: 0.3rem;
-                                            top: 0;
-                                            bottom: 0;
-                                            left:-3%;
-                                            background-color: $text-color-orange;
+                                            @extend g-Child-menu-after;
                                         }
                                         &::before {
-                                            position: absolute;
-                                            content: "";
+                                            @extend g-Child-menu-before;
                                             left: -3%;
                                             top: calc(#{$height-menu-item}/4);
-                                            border-width: 4px 4px;
-                                            border-style: solid;
-                                            border-color: transparent $text-color-orange transparent transparent;
-                                            transform: translate(-100%, -50%);
+                                            border-color: transparent $orange-color transparent transparent;
                                         }
                                         .great-grandchild-menu-item {
-                                            background-color: #ffffff;
                                             border-bottom: 1px solid #eeeeee;
                                             .great-grandchild-menu-item-link {
                                                 padding: 0.5rem 1rem;
-                                                color: $text-color;
+                                                color: $gray-color;
+                                                background-color: #ffffff;
                                                 &:hover {
-                                                    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
-                                                    color: $text-color-orange;
+                                                    @extend box-s-color;
                                                 }
                                             }
                                         }
@@ -250,8 +211,6 @@ body {
                 }
             }
             &:hover {
-                .posedo-right,
-                .posedo-left,
                 .chil-menu {
                     display: block;
                 }
@@ -276,7 +235,7 @@ form {
         .search-icon {
             justify-content: center;
             padding: .7rem;
-            background-color: $text-color-orange;
+            background-color: $orange-color;
             border-top-right-radius: 3px;
             border-bottom-right-radius: 3px;
             .fa-search-icon {
