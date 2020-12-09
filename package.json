@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "scss": "node-sass --watch unit-9/scss/style.scss -o unit-9/scss",
+    "scss": "node-sass --watch animation/button/scss/style.scss -o animation/button/scss",
+    "scss": "node-sass --watch formChat/scss/main.scss -o form/css",
+    "scss": "node-sass --watch unit-10/scss/style.scss -o unit-10/scss"
   },
   "repository": {
     "type": "git",
@@ -19,6 +22,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.1",
     "bootstrap": "^4.5.3",
-    "jquery": "^3.5.1"
+    "jquery": "^3.5.1",
+    "node-sass": "^5.0.0"
   }
 }
