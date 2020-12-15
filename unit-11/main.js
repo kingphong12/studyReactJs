@@ -10,7 +10,7 @@ function arrayRepeatElement(str, number) {
 		for (let i = 0; i < number; i++) {
 			array.push(str)
 		}
-		console.log(array);
+		console.log(array)
 	}
 }
 
@@ -25,7 +25,7 @@ function arrayRepeatElement(str, number) {
 		for (let i = 0; i < number; i++) {
 			array.splice(i, 0, str)
 		}
-		console.log(array);
+		console.log(array)
 	}
 }
 
@@ -40,7 +40,7 @@ function reverseArray() {
 		array[i] = array[(array.length-1)-i]
 		array[(array.length-1)-i] = temp
 	}
-	console.log(array);
+	console.log(array)
 }
 
 // bài 3: Xóa đi các phần tử được xem là sai (fail)
@@ -61,7 +61,7 @@ function removeElement() {
 
 const arrayInputSort = [6, 4, 0, 3, -2, 1]
 const arrayOutputSort = arrayInputSort.sort()
-console.log(arrayOutputSort);
+console.log(arrayOutputSort)
 
 // bài 6: Kiểm tra đầu vào có phải là một object hay không? (pass)
 
