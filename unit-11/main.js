@@ -2,7 +2,7 @@
 // bài 1: lặp phần tử (pass)
 
 function arrayRepeatElement(str, number) {
-	let array = []
+	const array = []
 	if (typeof(str) !== 'string') {
 		return 'data khong hop le'
 	}
@@ -17,7 +17,7 @@ function arrayRepeatElement(str, number) {
 // making 2
 
 function arrayRepeatElement(str, number) {
-	let array = []
+	const array = []
 	if (typeof(str) !== 'string') {
 		return 'data khong hop le'
 	}
