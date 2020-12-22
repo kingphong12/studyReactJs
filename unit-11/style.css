@@ -1,0 +1,36 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    font-family: tahoma;
+    font-size: 62.5%;
+    box-sizing: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.currenTime {
+    width: 100px;
+    height: 100px;
+    background-color: #333333;
+    cursor: pointer;
+    margin-right: 5rem;
+}
+
+.form {
+    margin-right: 5rem;
+}
+.double_click {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    cursor: pointer;
+    margin-right: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+}

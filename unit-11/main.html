@@ -4,9 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <!-- bài 1 -->
+    <div class="currenTime" id="curentime" onmouseenter = "testtime()" onmouseleave= "testOutTime()">ád</div>
+
+    <!-- bài 2 -->
+    <form action="" method="post" name="form" class="form">
+        <label for="">Nhập ký tự</label> <br>
+        <input type="text" name="" id="checkInput" value="">
+        <input type="submit" value="check" onclick="getInfo()">
+
+        <!-- bài 3 -->
+         <input type="text" id="checkNum">
+         <input type="submit" value="checked" id="btn" onclick="testNumber()">
+    </form>
+
+    <!-- bài 4 -->
+    <div class="double_click" id="doubleClick" ondblclick = "eventDoubleClick()">Bài 4</div>
+
+    <!-- bài: 6 -->
+    <form action="" method="post" name="form">
+        <select name="fruits" id=""> 
+            <option value="0" checked>fruits</option>
+            <option value="1">apple</option>
+            <option value="2">orange</option>
+            <option value="3">banana</option>
+        </select>
+        <input type="submit" value="check" onclick="selectItem()">
+    </form>
+
     <script src="main.js"></script>
 </body>
 </html>
